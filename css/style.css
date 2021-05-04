@@ -1,0 +1,32 @@
+#result_div {
+    display: flex;
+    flex-flow: column;
+}
+
+#input {
+    padding: 5px;
+    width: auto;
+}
+
+label {
+    margin: 5px;
+}
+
+#input {
+    display: flex;
+    flex-flow: column;
+}
+
+#calculate {
+    margin: 5px;
+    width: 80px;
+}
+
+.input_row {
+    width: auto;
+    margin: 5px;
+}
+
+.range {
+    width: 60px;
+}

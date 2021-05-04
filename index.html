@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Integrals</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <fieldset id="input">
+        <legend>Integrals</legend>
+
+        <div class="input_row">
+            <label>Method:</label>
+            <select id="method">
+                <option>Rienmann sum (left)</option>
+                <option>Rienmann sum (right)</option>
+                <option>Rienmann sum (middle)</option>
+                <option>Trapezoidal rule</option>
+                <option>Simpson's rule</option>
+            </select>
+        </div>
+        <div class="input_row">
+            <label>Function:</label>
+            <select id="function">
+                <option>f(x)=exp(-x)</option>
+                <option>f(x)=sin(x)</option>
+                <option>f(x)=exp(-x^2)</option>
+                <option>f(x)=exp(-4x-x^3)</option>
+            </select>
+        </div>
+        <div class="input_row">
+            <label>a = </label>
+            <input class="range" id="a" type="number" placeholder="a">
+        </div>
+        <div class="input_row">
+            <label>b = </label>
+            <input class="range" id="b" type="number" placeholder="b">
+        </div>
+        <div class="input_row">
+            <label>N = </label>
+            <input class="range" id="N" type="number" placeholder="b">
+        </div>
+
+
+        <button id="calculate">Calculate</button>
+
+        <div id="result_div">
+
+        </div>
+
+    </fieldset>
+
+    <script src="js/render.js"></script>
+    <script src="js/rienmann_sum.js"></script>
+    <script src="js/simpsons_rule.js"></script>
+    <script src="js/trapeziodal_rule.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
