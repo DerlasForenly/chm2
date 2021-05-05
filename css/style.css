@@ -1,4 +1,4 @@
-#result_div {
+#result_div_equation, #result_div_integral {
     display: flex;
     flex-flow: column;
 }
@@ -11,8 +11,13 @@
     margin: 10px;
 }
 
+legend {
+    /* color: #b00b69; */
+}
+
 label {
     margin: 5px;
+    /* color: #eba */
 }
 
 #input {
@@ -20,7 +25,7 @@ label {
     flex-flow: column;
 }
 
-#calculate {
+#calculate_integral, #calculate_equation {
     margin: 5px;
     width: 80px;
 }

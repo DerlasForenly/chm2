@@ -1,31 +1,8 @@
-function f1(x) {
-    return Math.exp(-x)
-}
-
-function f2(x) {
-    return Math.sin(x)
-}
-
-function f3(x) {
-    return Math.exp(-3*x + x**2)
-}
-
-function f4(x) {
-    return Math.exp(-4*x - x**3)
-}
-
-
-calculate.onclick = () => {
+calculate_integral.onclick = () => {
     let selected_method
     let selected_function
 
-    
-
-    console.log(a.value, b.value, N.value)
-    console.log(method.value)
-    console.log(func.value)
-
-    switch (func.value) {
+    switch (func_integral.value) {
         case "f(x)=exp(-x)":
             selected_function = f1
             break;
@@ -38,11 +15,14 @@ calculate.onclick = () => {
         case "f(x)=exp(-4x - x^3)":
             selected_function = f4
             break;
+        case "y' = -xy":
+            selected_function = fxy1
+            break;
         default:
             break;
     }
 
-    switch (method.value) {
+    switch (method_integral.value) {
         case "Riemann sum (left)":
             selected_method = riemann_sum_left
             break;
@@ -62,7 +42,70 @@ calculate.onclick = () => {
             break;
     }
 
-    let result = selected_method(selected_function, a.value, b.value, N.value)
+    let result = selected_method(
+        selected_function, 
+        a_integral.value, 
+        b_integral.value, 
+        N_integral.value
+    )
 
-    render_result(result)
+    render_result_integral(result)
+}
+
+calculate_equation.onclick = () => {
+    let selected_method
+    let selected_function
+
+    switch (equation.value) {
+        case "y' = -xy":
+            selected_function = fxy1
+            break;
+        case "y' = y + x":
+            selected_function = fxy2
+            break;
+        case "y' = (3x - 12(x^2))":
+            selected_function = fxy3
+            break;
+        case "y' = x * x - y":
+            selected_function = fxy4
+            break;
+        case "y' = x - y + xy":
+            selected_function = fxy5
+            break;
+        case "y' = 6x^2 + 5xy":
+            selected_function = fxy6
+            break;
+        case "y' = y":
+            selected_function = fxy7
+            break;
+        default:
+            break;
+    }
+
+    switch (method_equation.value) {
+        case "Euler method":
+            selected_method = Euler_method
+            break;
+        case "Runge-Kutta2":
+            selected_method = Runge_Kutta2
+            break;
+        case "Runge-Kutta3":
+            selected_method = Runge_Kutta3
+            break;
+        case "Runge-Kutta4":
+            selected_method = Runge_Kutta4
+            break;
+        default:
+            break;
+    }
+
+    let result = selected_method(
+        selected_function, 
+        a_equation.value, 
+        b_equation.value, 
+        y0_equation.value, 
+        N_equation.value
+    )
+
+    render_result_equation(result)
 }
