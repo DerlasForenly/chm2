@@ -11,11 +11,6 @@ function Euler_method(f, a, b, y0, N) {
     
         return yi
     }
-    
-    a = parseFloat(a)
-    b = parseFloat(b)
-    N = parseFloat(N)
-    y0 = parseFloat(y0)
 
     let y = []
     let h = (b - a) / N

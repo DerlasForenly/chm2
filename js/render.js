@@ -40,7 +40,7 @@ function render_result_integral(value) {
 
     let label = document.createElement('label')
     label.setAttribute('class', 'result_label')
-    label.textContent = `Result: ${value}`
+    label.textContent = `f(x) = ${value}`
 
     result_div_integral.appendChild(label);
 }
@@ -51,7 +51,7 @@ function render_result_equation(value) {
     for (let i = 0; i < value.length; i++) {
         let label = document.createElement('label')
         label.setAttribute('class', 'result_label')
-        label.textContent = `y${i}: ${value[i]}`
+        label.textContent = `y${i + 1}: ${value[i]}`
         result_div_equation.appendChild(label);
     }
     

@@ -1,8 +1,4 @@
 function riemann_sum_left(f, a, b, N) {
-    a = parseFloat(a)
-    b = parseFloat(b)
-    N = parseFloat(N)
-
     let I = 0
     let h = parseFloat((b - a) / N)
 
@@ -14,10 +10,6 @@ function riemann_sum_left(f, a, b, N) {
 }
 
 function riemann_sum_right(f, a, b, N) {
-    a = parseFloat(a)
-    b = parseFloat(b)
-    N = parseFloat(N)
-
     let I = 0
     let h = parseFloat((b - a) / N)
 
@@ -29,10 +21,6 @@ function riemann_sum_right(f, a, b, N) {
 }
 
 function riemann_sum_middle(f, a, b, N) {
-    a = parseFloat(a)
-    b = parseFloat(b)
-    N = parseFloat(N)
-    
     let I = 0
     let h = parseFloat((b - a) / N)
 

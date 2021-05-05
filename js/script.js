@@ -44,9 +44,9 @@ calculate_integral.onclick = () => {
 
     let result = selected_method(
         selected_function, 
-        a_integral.value, 
-        b_integral.value, 
-        N_integral.value
+        parseFloat(a_integral.value), 
+        parseFloat(b_integral.value), 
+        parseFloat(N_integral.value)
     )
 
     render_result_integral(result)
@@ -101,10 +101,10 @@ calculate_equation.onclick = () => {
 
     let result = selected_method(
         selected_function, 
-        a_equation.value, 
-        b_equation.value, 
-        y0_equation.value, 
-        N_equation.value
+        parseFloat(a_equation.value), 
+        parseFloat(b_equation.value), 
+        parseFloat(y0_equation.value), 
+        parseFloat(N_equation.value)
     )
 
     render_result_equation(result)
