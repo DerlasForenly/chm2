@@ -3,9 +3,12 @@
     flex-flow: column;
 }
 
-#input {
+.input {
+    display: flex;
+    flex-flow: column;
     padding: 5px;
     width: auto;
+    margin: 10px;
 }
 
 label {
