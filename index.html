@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Integrals</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <fieldset class="input">
@@ -52,9 +53,11 @@
             <input class="range" id="N_integral" type="number" placeholder="b" value="1000">
         </div>
 
-
-        <button id="calculate_integral">Calculate</button>
-
+        <div class="input_row">
+            <button id="calculate_integral">Calculate</button>
+            <button id="compare_integral">Compare</button>
+        </div>
+        
         <div id="result_div_integral">
 
         </div>
@@ -104,12 +107,10 @@
             <input class="range" id="y0_equation" type="number" placeholder="y0" value="1">
         </div>
 
-        <!-- <div class="input_row">
-            <label>x0 = </label>
-            <input class="range" id="x0" type="number" placeholder="x0" value="0">
-        </div> -->
-
-        <button id="calculate_equation">Calculate</button>
+        <div class="input_row">
+            <button id="calculate_equation">Calculate</button>
+        </div>
+        
 
         <div id="result_div_equation">
 

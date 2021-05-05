@@ -19,9 +19,7 @@ function Runge_Kutta2(f, a, b, y0, N) {
     let y = []
     let h = (b - a) / N
 
-    for (let k = a + h; k <= b; k += h) {
-        y.push(RK2(f, k, a, y0, N))
-    }
+    for (let k = a + h; k <= b; k += h) y.push(RK2(f, k, a, y0, N))
 
     return y
 }
@@ -49,9 +47,7 @@ function Runge_Kutta3(f, a, b, y0, N) {
     let y = []
     let h = (b - a) / N
 
-    for (let k = a + h; k <= b; k += h) {
-        y.push(RK3(f, k, a, y0, N))
-    }
+    for (let k = a + h; k <= b; k += h) y.push(RK3(f, k, a, y0, N))
 
     return y
 }
@@ -79,9 +75,7 @@ function Runge_Kutta4(f, a, b, y0, N) {
     let y = []
     let h = (b - a) / N
 
-    for (let k = a + h; k <= b; k += h) {
-        y.push(RK4(f, k, a, y0, N))
-    }
+    for (let k = a + h; k <= b; k += h) y.push(RK4(f, k, a, y0, N))
 
     return y
 }

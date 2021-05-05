@@ -109,3 +109,76 @@ calculate_equation.onclick = () => {
 
     render_result_equation(result)
 }
+
+compare_integral.onclick = () => {
+    let selected_function
+    let result = []
+
+    switch (func_integral.value) {
+        case "f(x)=exp(-x)":
+            selected_function = f1
+            break;
+        case "f(x)=sin(x)":
+            selected_function = f2
+            break;
+        case "f(x)=exp(-3x + x^2)":
+            selected_function = f3
+            break;
+        case "f(x)=exp(-4x - x^3)":
+            selected_function = f4
+            break;
+        case "y' = -xy":
+            selected_function = fxy1
+            break;
+        default:
+            break;
+    }
+
+    result.push(
+        riemann_sum_left
+        (
+            selected_function, 
+            parseFloat(a_integral.value), 
+            parseFloat(b_integral.value), 
+            parseFloat(N_integral.value)
+        )
+    )
+    result.push(
+        riemann_sum_right
+        (
+            selected_function, 
+            parseFloat(a_integral.value), 
+            parseFloat(b_integral.value), 
+            parseFloat(N_integral.value)
+        )
+    )
+    result.push(
+        riemann_sum_middle
+        (
+            selected_function, 
+            parseFloat(a_integral.value), 
+            parseFloat(b_integral.value), 
+            parseFloat(N_integral.value)
+        )
+    )  
+    result.push(
+        trapezoidal_rule
+        (
+            selected_function, 
+            parseFloat(a_integral.value), 
+            parseFloat(b_integral.value), 
+            parseFloat(N_integral.value)
+        )
+    )  
+    result.push(
+        simpsons_rule
+        (
+            selected_function, 
+            parseFloat(a_integral.value), 
+            parseFloat(b_integral.value), 
+            parseFloat(N_integral.value)
+        )
+    )     
+
+    render_result_table_integral(result)
+}
